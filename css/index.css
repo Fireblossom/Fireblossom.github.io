@@ -5,8 +5,12 @@ body {
     display:block;
 }
 
+header{
+    padding: 0px 12% 0px 12%;
+}
+
 main {
-    padding: 30px 12px 30px 12px;
+    padding: 30px 12% 30px 12%;
 }
 
 .name_card_container{
