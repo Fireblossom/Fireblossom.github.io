@@ -58,6 +58,7 @@ main {
 
 footer {
     padding: 12px 0;
+    position: absolute;
     bottom: 0;
     width: 100%;
     background-color: #a1a1a1;/*#333*/
