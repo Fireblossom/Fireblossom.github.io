@@ -56,7 +56,14 @@ main {
 /* Responsive styles for smaller screens */
 @media (max-width: 768px) {
     .left_img {
-        min-width: 100%;
+        min-width: 80%;
+    }
+    header{
+        padding: 0px 5% 0px 5%;
+    }
+
+    main {
+        padding: 40px 5% 40px 5%;
     }
 }
 
