@@ -58,10 +58,18 @@ main {
     .left_img {
         min-width: 80%;
     }
+    
+    .right_text{
+        max-width: 90%;
+    }
+    
     header{
         padding: 0px 5% 0px 5%;
     }
-
+    
+    .navbar ul {
+        padding: 10px 2% 10px 2%
+    }
     main {
         padding: 40px 5% 40px 5%;
     }
