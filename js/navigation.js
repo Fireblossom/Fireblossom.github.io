@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    fetch("navigation.html")
+    fetch("../tools/navigation.html")
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');

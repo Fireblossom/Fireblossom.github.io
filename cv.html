@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/cv.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+        <title>Curriculum Vitae</title>
+    </head>
+    <body>
+        <div class="download">
+            <button onclick="downloadPDF()">Download PDF</button>
+        </div>
+        <div class="container">
+            <div class="title">
+                <h2>Changxu Duan</h2>
+                <h4 style="font-weight: 400; font-style: oblique 50deg;">NLP Researcher</h4>
+            </div>
+
+            <div class="content">
+                <div class="left-content">
+                    <div class="one-block" id="Contact">
+                        <h4>Contact</h4>
+                        <div class="icon_description">
+                            <img src="./img/location.png" alt="location" style="height: 13px;">
+                            <p>Darmstadt, Hessen, Germany</p>
+                        </div>
+
+                        <div class="icon_description">
+                            <img src="./img/linkedin.png" alt="linkedin" style="height: 12.8px;">
+                            <a href="https://www.linkedin.com/in/changxu-duan/"><p>linkedin.com/in/changxu-duan/</p></a>
+                        </div>
+
+                        <div class="icon_description">
+                            <img src="./img/github.png" alt="website" style="height: 13px;">
+                            <a href="https://fireblossom.github.io/"><p>https://fireblossom.github.io/</p></a>
+                        </div>
+
+                        <div class="icon_description">
+                            <img src="./img/email.png" alt="email" style="height: 13px;">
+                            <p>changxu.duan@foxmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="one-block" id="Education">
+                        <h4>Education</h4>
+                        <div class="experiment">
+                            <h5>M.Sc. Computaional Linguistics</h5>
+                            <p id="organization">University of Stuttgart <br> 2018 - 2021</p>
+                        </div>
+
+                        <div class="experiment">
+                            <h5>B.Sc. Computer Sciences</h5>
+                            <p id="organization">Henan Normal University <br> 2014 - 2018</p>
+                        </div>
+                    </div>
+                    
+                    <div class="one-block" id="Skills">
+                        <h4>Skills</h4>
+                        <ul style="padding-inline-start: 15px;">
+                            <li>Python | Java | C | C++</li>
+                            <li>Machine Learning</li>
+                            <li>Deep Learning</li>
+                            <li>Natural Language Processing</li>
+                            <li>Algorithms</li>
+                            <li>DevOps</li>
+                            <li>Large Language Model</li>
+                            <li>PyTorch | Huggingface</li>
+                            <li>Spacy | NLTK | WordNet</li>
+                            <li>Numpy | Scikit-learn</li>
+                            <li>SPARQL | SQL</li>
+                            <li>ArangoDB | MySQL</li>
+                            <li>Unstructured Data</li>
+                            <li>Time series Data</li>
+                            <li>Data Annotation</li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                <div class="right-content">
+                    <div  class="one-block" id="Profile">
+                        <h4>Profile</h4>
+                        <p>I am an enthusiastic researcher bridging the realms of language and AI. 
+                            With a strong penchant for knowledge mining, 
+                            I excel in deriving structured insights from unstructured data. 
+                            My expertise extends to devops for large language models (LLM), 
+                            showcasing my commitment to harnessing cutting-edge AI solutions.</p>
+                    </div>
+
+                    <div  class="one-block" id="Work Experience">
+                        <h4>Work Experience</h4>
+                        <div class="experiment">
+                            <h5>Research Assistant</h5>
+                            <p id="organization">Technische Universität Darmstadt &nbsp&nbsp&nbsp&nbsp 08.2021 - Present</p>
+                            <p>BMBF-funded project
+                                <a href="https://insightsnet.org/">InsightsNet</a>, emphasizing academic publications knowledge mining.</p>
+                            <ul>
+                                <li>Developed an annotation process pipeline for parsing these publications.</li>
+                                <li>Established cross-disciplinary connections based on the extracted content.</li>
+                            </ul>
+                            <p></p>
+                        </div>
+                        
+                        <div class="experiment">
+                            <h5>Machine Learning Intern</h5>
+                            <p id="organization">Robert Bosch GmbH &nbsp&nbsp&nbsp&nbsp 04.2020 - 10.2020</p>
+                            <p>Crafted time series models with RNNs, GANs, and VAEs for bicycle sensor predictions.</p>
+                            <ul>
+                                <li>Optimized data preprocessing, model tuning, stayed abreast of ML and time series trends.</li>
+                                <li>Partnered with cross-functional teams for insights and model refinement.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div  class="one-block" id="Project">
+                        <h4>Projects & Tools</h4>
+                        <div class="experiment">
+                            <h5>Master Thesis</h5>
+                            <p id="organization">Master Thesis Student at Robert Bosch GmbH &nbsp&nbsp&nbsp&nbsp 10.2020 - 04.2021</p>
+                            <p>Investigated event-centered emotion analysis applicability in Semi-supervised Learning.</p>
+                            <ul>
+                                <li>Designed a method using similarity to select unlabeled data, manage clustering attributes.</li>
+                                <li>Identified key attributes of SSL Emotion Analysis tasks for performance prediction.</li>
+                            </ul>
+                        </div>
+
+                        <div class="experiment">
+                            <h5>RainbowLatex Annotator</h5>
+                            <a href="https://github.com/InsightsNet/texannotate"><p id="link">https://github.com/InsightsNet/texannotate</p></a>
+                            <p>Transforms LaTeX codes into detailed PDF layouts, specifically for academic publications.</p>
+                            <ul>
+                                <li>LaTeX Compilation: transformed LaTeX to PDF with dockerized TexLive2023.</li>
+                                <li>LaTeX Annotation: applied color-labels to LaTeX elements for layout extraction.</li>
+                                <li>Data Extraction: extracted text & figures from PDFs, identifying both types and positions.</li>
+                            </ul>
+                        </div>
+
+                        <div class="experiment">
+                            <h5>SPARQL Autocompletion</h5>
+                            <a href="https://github.com/Fireblossom/sparql-auto-completion"><p id="link">https://github.com/Fireblossom/sparql-auto-completion</p></a>
+                            <p>A language server tailored for enhancing SPARQL query functionalities.</p>
+                            <ul>
+                                <li>Syntax Highlighting: improved the syntax visualization of VSCode SPARQL extension.</li>
+                                <li>Advanced Features: auto-completion for prefixes & IntelliSense for classes and properties.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
+<script>
+    function downloadPDF() {
+
+        var links = document.querySelectorAll('.container a');
+        for (var i = 0; i < links.length; i++) {
+            links[i].style.color = 'black';
+            links[i].style.textDecoration = 'underline';
+            links[i].style.fontSize = '0.7rem';
+        }
+        
+        var element = document.querySelector('.container');
+        html2pdf(element, {
+            margin: 8,
+            filename: 'Changxu_Duan_CV.pdf',
+            image: { type: 'png', quality: 0.98 },
+            enableLinks: true,
+            html2canvas: { scale: 1.4, logging: true, dpi: 100, letterRendering: true },
+            jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+        });
+    }
+</script>

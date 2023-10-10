@@ -1,0 +1,32 @@
+.project_container {
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
+    row-gap: 10px;
+    padding: 5px 3% 5px 3%;
+}
+
+.project_block {
+    padding: 10px;
+}
+
+.project_title {
+    border-bottom: 1px solid #968a8a;
+    padding: 10px 0;
+}
+
+.project_title h4 {
+    text-align: left;
+    padding: 0;
+    margin: 0;
+}
+
+.project_cover {
+    height: 150px;
+    word-wrap: break-word;
+    margin: 10px 0 ;
+}
+
+p {
+    text-align: justify;
+    hyphens: auto;
+}

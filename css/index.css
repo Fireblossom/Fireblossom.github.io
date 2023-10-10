@@ -1,67 +1,152 @@
-body {   
+html{
+    text-align: -webkit-center;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
+    font-size: 1rem; line-height: 1.5rem; font-weight: 400;font-style:normal;letter-spacing:0;
     margin: 0;
     padding: 0;
-    display:block;
 }
 
 header{
     padding: 0px 12% 0px 12%;
+    margin: 30px 0;
 }
 
 main {
+    flex: 1;
+    height:max-content;
     padding: 40px 12% 40px 12%;
 }
 
 .name_card_container{
-    margin: 0;
-    padding: 5px 5% 5px 5%;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 20% 1fr;
+    column-gap: 50px;
+    overflow-wrap: normal;
     justify-content: center;
+    margin: 0;
+    padding: 5px 3% 5px 3%;
 }
 
-.left_img{
-    flex: 1;
-    flex-basis: 40%;
+.left_profilo{
     height: auto; 
-    max-width: 50%;
-    min-width: 40%;
+    text-align: left;
+    max-width: 100%;
+    min-width: 100%;
+    padding: 8px 0 0 0;
 }
 
-.left_img img{
+.left_profilo img{
     border: 3px dotted #a1a1a1;
-    max-width: 60%;
-    min-width: 40%;
+    max-width: 65%;
+    min-width: 60%;
+}
+
+.left_profilo #profilo_links{
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(20px, 1fr));
+    row-gap: 10px;
+    margin: 15px 0 0 0;
 }
 
 .right_text{
-    flex: 1;
-    flex-basis: 60%;
     padding: 0;
     max-width: 100%;
     justify-content: center;
     align-items: center;
 }
 
-.my_interests {
+a{
+    font-size: 0.9rem;
+    color: inherit;
+    font-weight: 300;
+    text-decoration: solid underline rgb(102, 102, 102) 0.05rem;
+    transition: all 0.2s ease-in-out;
+}
+
+a:visited {
+    color: rgb(70, 107, 242);
+    text-decoration: solid underline rgb(70, 107, 242) 0.05rem;
+}
+
+a:hover {
+    color:rgb(70, 107, 242);
+}
+
+h1, h2, h3, h4{
+    font-weight: 450;
+    line-height: 2rem;
+}
+
+h5{
+    font-weight: 400;
+}
+
+li, p{
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+    font-weight: 300;
+    text-align: justify;
     margin: 0;
-    padding:35px 0px 0px 0px;
-    width: 80%; 
-    border-bottom: 2.5px dotted #a1a1a1;
-    color: #4a4747;
+}
+
+ul{
+    padding-inline: 20px 0px;
+    margin: 0;
+}
+
+li {
+    list-style-type: none;
+    position: relative;    /* It's needed for setting position to absolute in the next rule. */
+}
+
+li::before {
+    content: '•';
+    position: absolute;
+    left: -1rem;          /* Adjust this value so that it appears where you want. */
+    font-size: 1.5rem;      /* Adjust this value so that it appears what size you want. */
+}
+
+footer {
+    align-items: center;
+    height: 40px;
+    color: rgb(0, 0, 0);
+    border-top: 2px dotted #968a8a;
+    padding: 10px 0;
+    margin: 0 12%;
+}
+
+footer p {
+    text-align: center;
 }
 
 /* Responsive styles for smaller screens */
-@media (max-width: 768px) {
-    .left_img {
-        min-width: 80%;
+@media screen and (max-width: 768px) {
+    .left_profilo{
+        text-align: center;
     }
     
-    .right_text{
-        max-width: 80%;
+    .left_profilo img{
+        max-width: 25%;
+        min-width: 20%;
     }
-    
+
+    .left_profilo #profilo_links{
+        row-gap: 5px;
+        margin: 8px 0 0 0;
+    }
+
+    .name_card_container{
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+    }
+
     header{
         padding: 0px 5% 0px 5%;
     }
@@ -69,17 +154,19 @@ main {
     .navbar ul {
         padding: 10px 2% 10px 2%
     }
+
     main {
-        padding: 40px 5% 40px 5%;
+        padding: 25px 3% 25px 3%;
+    }
+
+    footer {
+        margin: 0 5%;
     }
 }
 
-footer {
-    padding: 12px 0;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background-color: #a1a1a1;/*#333*/
-    color: white;
-    text-align: center;
-}
+@media screen and (min-width: 1300px) {
+    body {
+      width: 1300px;
+    }
+  }
+
