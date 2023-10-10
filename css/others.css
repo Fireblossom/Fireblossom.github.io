@@ -1,0 +1,18 @@
+.others_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    column-gap: 10px;
+    justify-items: center;
+    padding: 5px 3% 5px 3%;
+}
+
+.others_container img {
+    max-width: 80%;
+    height: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .others_container img {
+        max-width: 100%;
+    }
+}
