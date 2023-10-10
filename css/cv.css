@@ -15,26 +15,31 @@ body{
 .title{
     align-items: center;
     text-align: center;
+    margin: 0 0 40px 0;
 }
 
 .content{
     display: grid;
     grid-template-columns: 28% auto;
-    column-gap: 30px;
+    column-gap: 15px;
 }
 
 
 .one-block{
-    margin: 40px 0;
+    margin: 0 0 30px 0;
 }
 
+.left-content .one-block{
+    margin: 0 0 50px 0;
+}
 
 .experiment{
-    margin: 0px 0 25px 0;
+    margin: 0px 0 15px 0;
 }
 
 .experiment > #organization{
-    margin: 0 0 10px 0;
+    font-style: oblique 50deg;
+    margin: 0 0 5px 0;
 }
 
 .icon_description{
@@ -45,19 +50,21 @@ body{
 }
 
 h1, h2, h3{
-    font-weight: 400;
-}
-
-h4, h5{
-    font-weight: 400;
-    margin: 0;
+    font-weight: 450;
+    margin: 0 0 8px 0;
 }
 
 h4{
+    font-weight: 450;
     letter-spacing: 0.08rem;
     border-bottom: 1em;
     border-color: rgb(70, 70, 70);
-    margin: 0px 0 20px 0;
+    margin: 0 0 20px 0;
+}
+
+h5{
+    font-weight: 400;
+    margin: 0;
 }
 
 p{
@@ -73,13 +80,26 @@ hr{
 }
 
 ul{
-    padding-inline-start: 30px;
+    padding-inline: 20px 0px;
     margin: 0;
 }
 
+li {
+    list-style-type: none;
+    position: relative;    /* It's needed for setting position to absolute in the next rule. */
+}
+
+li::before {
+    content: '•';
+    position: absolute;
+    left: -1rem;          /* Adjust this value so that it appears where you want. */
+    font-size: 1.3rem;      /* Adjust this value so that it appears what size you want. */
+}
+
 .container a{
+    font-size: 0.7rem;
     color: inherit;
-    text-decoration: underline;
+    text-decoration: solid underline rgb(102, 102, 102) 0.05rem;
     transition: all 0.2s ease-in-out;
 }
 
@@ -114,9 +134,9 @@ button:hover{
 }
 
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 730px) {
     body {
-      width: 1000px;
+      width: 730px;
     }
   }
 
@@ -127,10 +147,14 @@ button:hover{
         padding: 0;
     }
 
+    ul{
+        padding-inline: 0px 0px;
+    }
+
     .container a {
+        font-size: inherit;
         color: black;
         text-decoration: underline;
-        font-size: inherit;
     }
 
     .container a:visited {
