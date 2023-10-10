@@ -67,7 +67,7 @@ h5{
     margin: 0;
 }
 
-p{
+li, p{
     font-size: 0.7rem;
     text-align: justify;
     margin: 0;
