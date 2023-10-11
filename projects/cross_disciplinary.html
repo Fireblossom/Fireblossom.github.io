@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/project.css">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script src="../js/navigation.js"></script>
+    <title>Changxu Duan</title>
+</head>
+<body>
+    <!--<div id="logo">
+        <img src="img/cx_fish.png" alt="cx_fish" style="width: 10%; display: block; margin: 15px auto;">
+    </div>-->
+
+    <!-- Include Navigation -->
+    <header id="nav-bar"></header>
+    
+    <!-- Main Content -->
+    <main>
+        <div class="project_container">
+            <div class="project_block">
+                <div class="project_title"><h4>NLP for Academic Publication: <br>&nbsp&nbsp&nbsp&nbsp
+                    Finding Cross-disciplinary Connections</h4></div>
+                <div class="project_cover">
+                    <p style="margin: 0 0 0 17px;">▪▪▫▫▫▫▫▫▫▫</p>
+                    <ul>
+                        <li>Focuses on using Natural Language Processing (NLP) to analyze academic publications</li>
+                        <li>Scans research papers to find intersections appear across different fields</li>
+                        <li>Offers insights into areas where researchers might collaborate or share resources</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project_description">
+                <div class="pd_block" id="academic publication">
+                    <p>Academic Publication</p>
+                    <ul>
+                        <li>Books</li>
+                        <li>Newsletters & Journal</li>
+                        <li>Theses & Dissertations</li>
+                        <li>Conference Proceedings</li>
+                        <li>Posters</li>
+                        <li>Reviews</li>
+                        <li>Teaching Materials</li>
+                        <li>Patents</li>
+                        <li>Encyclopedia Entries</li>
+                        <li>Datasets</li>
+                        <li>Software & Code</li>
+                    </ul>
+                </div>
+
+                <div class="pd_block" id="intersections">
+                    <p>Intersections of Cross-disciplinary</p>
+                    <ul>
+                        <li>Research Objectives</li>
+                        <li>Theoretical Framework</li>
+                        <li>Research Tools & Technologies</li>
+                        <li>Datasets</li>
+                        <li>Study Populations</li>
+                        <li>Challenges and Limitations</li>
+                        <li>Funding and Resources</li>
+                        <li>Historical Context</li>
+                        <li>Ethical Considerations</li>
+                        <li>Societal Impacts</li>
+                    </ul>
+                </div>
+
+                <div class="pd_block" id="insights">
+                    <p>Insights</p>
+                    <div class="mermaid">
+                        %%{
+                            init: {
+                              'theme': 'base',
+                              'themeVariables': {
+                                'primaryColor': '#CCE5FF',
+                                'primaryTextColor': '#000000',
+                                'primaryBorderColor': '#000000',
+                                'lineColor': '#000000',
+                                'secondaryColor': '#E5CCFF',
+                                'tertiaryColor': '#FFFFCC'
+                              }
+                            }
+                          }%%
+
+                        mindmap
+                        root((CNN))
+                            ((Natural Language Processing))
+                                (Documents Classification)
+                                (Intents Reconition)
+                                (Emotion Analysis)
+                        
+                            ((Robotics))
+                                (Gesture Recognition)
+                                (Object Manipulation)
+
+                            ((Computer Vision))
+                                (Object Detection)
+                                (Style Transfer)
+                                (Image Classification)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Copyright &copy; 2023. All rights reserved.</p>
+    </footer>
+
+    <script>
+        mermaid.initialize({startOnLoad:true});
+    </script>    
+</body>
+</html>
