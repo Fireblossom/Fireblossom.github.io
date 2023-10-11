@@ -1,17 +1,18 @@
 .project_container {
+    height:auto;
     display: grid;
-    grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
-    row-gap: 10px;
-    padding: 5px 3% 5px 3%;
+    grid-template-rows: 1fr;
+    row-gap: 50px;
+    padding: 0 3% 0 3%;
 }
 
 .project_block {
-    padding: 10px;
+    padding: 10px 0;
 }
 
 .project_title {
     border-bottom: 1px solid #968a8a;
-    padding: 10px 0;
+    padding: 0 0 10px 0;
 }
 
 .project_title h4 {
@@ -21,12 +22,51 @@
 }
 
 .project_cover {
-    height: 150px;
+    height: auto;
     word-wrap: break-word;
-    margin: 10px 0 ;
+    padding: 10px 13px ;
+    margin: 0;
+}
+
+.project_description {
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    column-gap: 10px;
+    row-gap: 50px;
+    justify-items: center;
+}
+
+.project_description .pd_block {
+    width: 240px;
+    border: 1px solid #968a8a;
+    border-radius: 5px;
+    padding: 10px; 
+}
+
+.project_description .pd_block p, 
+.project_description .pd_block li {
+    font-style: italic;
 }
 
 p {
     text-align: justify;
     hyphens: auto;
+}
+
+.mermaid tspan {
+    font-size: 1.8rem;
+}
+.mermaid circle {
+    r: 70;
+}
+.mermaid rect {
+    width: 200;
+    height: 100;
+}
+
+
+@media screen and (max-width: 700px) {
+    .project_description {
+        grid-template-columns: 1fr;
+    }
 }

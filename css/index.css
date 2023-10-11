@@ -1,4 +1,4 @@
-html{
+html {
     text-align: -webkit-center;
     width: 100%;
 }
@@ -13,18 +13,18 @@ body {
     padding: 0;
 }
 
-header{
+header {
     padding: 0px 12% 0px 12%;
     margin: 30px 0;
 }
 
 main {
     flex: 1;
-    height:max-content;
+    height:auto;
     padding: 40px 12% 40px 12%;
 }
 
-.name_card_container{
+.name_card_container {
     display: grid;
     grid-template-columns: 20% 1fr;
     column-gap: 50px;
@@ -34,7 +34,7 @@ main {
     padding: 5px 3% 5px 3%;
 }
 
-.left_profilo{
+.left_profilo {
     height: auto; 
     text-align: left;
     max-width: 100%;
@@ -42,27 +42,32 @@ main {
     padding: 8px 0 0 0;
 }
 
-.left_profilo img{
+.left_profilo img {
     border: 3px dotted #a1a1a1;
-    max-width: 65%;
-    min-width: 60%;
+    max-width: 100px;
+    min-width: 80px;
 }
 
-.left_profilo #profilo_links{
+.left_profilo #profilo_links {
     display: grid;
     grid-template-rows: repeat(auto-fit, minmax(20px, 1fr));
     row-gap: 10px;
     margin: 15px 0 0 0;
 }
 
-.right_text{
+.right_text {
     padding: 0;
     max-width: 100%;
     justify-content: center;
     align-items: center;
 }
 
-a{
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+#a_text {
     font-size: 0.9rem;
     color: inherit;
     font-weight: 300;
@@ -70,16 +75,16 @@ a{
     transition: all 0.2s ease-in-out;
 }
 
-a:visited {
+#a_text:visited {
     color: rgb(70, 107, 242);
     text-decoration: solid underline rgb(70, 107, 242) 0.05rem;
 }
 
-a:hover {
+#a_text:hover {
     color:rgb(70, 107, 242);
 }
 
-h1, h2, h3, h4{
+h1, h2, h3, h4 {
     font-weight: 450;
     line-height: 2rem;
 }
@@ -88,15 +93,16 @@ h5{
     font-weight: 400;
 }
 
-li, p{
+li, p {
     font-size: 0.9rem;
     line-height: 1.5rem;
     font-weight: 300;
     text-align: justify;
+    hyphens: auto;
     margin: 0;
 }
 
-ul{
+ul {
     padding-inline: 20px 0px;
     margin: 0;
 }
@@ -127,27 +133,27 @@ footer p {
 }
 
 /* Responsive styles for smaller screens */
-@media screen and (max-width: 768px) {
-    .left_profilo{
+@media screen and (max-width: 950px) {
+    .left_profilo {
         text-align: center;
     }
     
-    .left_profilo img{
-        max-width: 25%;
-        min-width: 20%;
+    .left_profilo img {
+        max-width: 80px;
+        min-width: 50px;
     }
 
-    .left_profilo #profilo_links{
+    .left_profilo #profilo_links {
         row-gap: 5px;
         margin: 8px 0 0 0;
     }
 
-    .name_card_container{
+    .name_card_container {
         grid-template-columns: 1fr;
         row-gap: 30px;
     }
 
-    header{
+    header {
         padding: 0px 5% 0px 5%;
     }
     
@@ -162,7 +168,22 @@ footer p {
     footer {
         margin: 0 5%;
     }
+
 }
+
+@media screen and (max-width: 500px) {
+    main a, li, p {
+        font-size: 0.8rem;
+        line-height: 1.4rem;
+    }
+
+    h1, h2, h3, h4, h5 {
+        font-size: small;
+        line-height: inherit;
+    }
+}
+
+
 
 @media screen and (min-width: 1300px) {
     body {
