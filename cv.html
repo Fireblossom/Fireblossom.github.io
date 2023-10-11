@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/cv.css">
+        <link rel="stylesheet" href="./css/cv.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
         <title>Curriculum Vitae</title>
     </head>
@@ -18,7 +18,7 @@
                 <h4 style="font-weight: 400; font-style: oblique 50deg;">NLP Researcher</h4>
             </div>
 
-            <div class="content">
+            <div class="all_content">
                 <div class="left-content">
                     <div class="one-block" id="Contact">
                         <h4>Contact</h4>
@@ -77,6 +77,14 @@
                             
                         </ul>
                     </div>
+
+                    <div class="one-block" id="Languages">
+                        <h4>Languages</h4>
+                        <ul style="padding-inline-start: 15px;">
+                            <li>English C1</li>
+                            <li>Chinese Native</li>
+                            <li>German B1</li>
+                    </div>
                 </div>
                 <div class="right-content">
                     <div  class="one-block" id="Profile">
@@ -127,7 +135,8 @@
 
                         <div class="experiment">
                             <h5>RainbowLatex Annotator</h5>
-                            <a href="https://github.com/InsightsNet/texannotate"><p id="link">https://github.com/InsightsNet/texannotate</p></a>
+                            <a href="https://github.com/InsightsNet/texannotate">
+                                <p id="reference_link">https://github.com/InsightsNet/texannotate</p></a>
                             <p>Transforms LaTeX codes into detailed PDF layouts, specifically for academic publications.</p>
                             <ul>
                                 <li>LaTeX Compilation: transformed LaTeX to PDF with dockerized TexLive2023.</li>
@@ -138,7 +147,8 @@
 
                         <div class="experiment">
                             <h5>SPARQL Autocompletion</h5>
-                            <a href="https://github.com/Fireblossom/sparql-auto-completion"><p id="link">https://github.com/Fireblossom/sparql-auto-completion</p></a>
+                            <a href="https://github.com/Fireblossom/sparql-auto-completion">
+                                <p id="reference_link">https://github.com/Fireblossom/sparql-auto-completion</p></a>
                             <p>A language server tailored for enhancing SPARQL query functionalities.</p>
                             <ul>
                                 <li>Syntax Highlighting: improved the syntax visualization of VSCode SPARQL extension.</li>
@@ -164,7 +174,7 @@
         
         var element = document.querySelector('.container');
         html2pdf(element, {
-            margin: 8,
+            margin: 10,
             filename: 'Changxu_Duan_CV.pdf',
             image: { type: 'png', quality: 0.98 },
             enableLinks: true,

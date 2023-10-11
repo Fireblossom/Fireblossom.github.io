@@ -1,60 +1,65 @@
-body{
+body {
     align-items: center;
     font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
     font-size: 0.9rem; line-height: 1.1rem; font-weight: 250;font-style:normal;letter-spacing:0;
-    width: auto;
+    width: 718px;
     height: auto;
     margin: auto;
     padding: 5%;
 }
 
-.container{
-    padding: 10px;
+.container {
+    padding: 0;
 }
 
-.title{
+.title {
     align-items: center;
     text-align: center;
     margin: 0 0 40px 0;
 }
 
-.content{
+.all_content {
     display: grid;
     grid-template-columns: 28% auto;
-    column-gap: 15px;
+    column-gap: 20px;
 }
 
 
-.one-block{
+.one-block {
     margin: 0 0 30px 0;
 }
 
-.left-content .one-block{
-    margin: 0 0 50px 0;
+.left-content .one-block {
+    margin: 0 0 55px 0;
 }
 
-.experiment{
+
+.experiment {
     margin: 0px 0 15px 0;
 }
 
-.experiment > #organization{
+.experiment #organization, #reference_link {
     font-style: oblique 50deg;
     margin: 0 0 5px 0;
 }
 
-.icon_description{
+.icon_description {
     display: grid;
-    grid-template-columns: 10% auto;
-    align-items: center;
+    grid-template-columns: 20px 1fr;
+    align-items:center;
     margin: 10px 0;
 }
 
-h1, h2, h3{
+.icon_description p {
+    width: inherit;
+}
+
+h1, h2, h3 {
     font-weight: 450;
     margin: 0 0 8px 0;
 }
 
-h4{
+h4 {
     font-weight: 450;
     letter-spacing: 0.08rem;
     border-bottom: 1em;
@@ -62,24 +67,24 @@ h4{
     margin: 0 0 20px 0;
 }
 
-h5{
+h5 {
     font-weight: 400;
     margin: 0;
 }
 
-li, p{
+li, p {
     font-size: 0.7rem;
     text-align: justify;
     margin: 0;
 }
 
-hr{
+hr {
     width: 96%;
     height: 0.01px;
     margin: 10px 0;
 }
 
-ul{
+ul {
     padding-inline: 20px 0px;
     margin: 0;
 }
@@ -96,7 +101,7 @@ li::before {
     font-size: 1.3rem;      /* Adjust this value so that it appears what size you want. */
 }
 
-.container a{
+.container a {
     font-size: 0.7rem;
     color: inherit;
     text-decoration: solid underline rgb(102, 102, 102) 0.05rem;
@@ -111,13 +116,13 @@ li::before {
     color: inherit;
 }
 
-.download{
+.download {
     text-align:right;
-    padding: 0;
+    padding: 0 0 40px 0;
     margin: 0;
 }
 
-button{
+button {
     height: 38px;
     width: 120px;
     border: 1px solid rgb(22, 22, 22);
@@ -127,18 +132,15 @@ button{
     transition: all 0.2s ease-in-out;
 }
 
-button:hover{
+button:hover {
     cursor: pointer;
     border-radius: 0.5vh;
     background-color: rgb(223, 233, 255);
 }
 
+@media screen and (max-width: 730px) {
 
-@media screen and (min-width: 730px) {
-    body {
-      width: 730px;
-    }
-  }
+}
 
 @media print {
     .body {
@@ -152,7 +154,7 @@ button:hover{
     }
 
     .container a {
-        font-size: inherit;
+        font-size: 0.7rem;;
         color: black;
         text-decoration: underline;
     }
