@@ -3,49 +3,108 @@
     display: grid;
     grid-template-rows: 1fr;
     row-gap: 50px;
-    padding: 0 3% 0 3%;
+    background-color: #7ca5a8;
+    padding: 5%;
 }
+
+.project_keywords_container {
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    column-gap: 30px;
+    row-gap: 30px;
+    overflow: auto;
+    align-content: space-between;
+    justify-items: center;
+    height: auto;
+    background: linear-gradient(#4f7275 0%, 0.5%, #7ca5a8 40%);
+    padding: 5%;
+}
+
+.project_procedure_container {
+    background: linear-gradient(#4f7275 0%, 0.5%, #7ca5a8 40%);
+    padding: 5%;
+}
+
 
 .project_block {
-    padding: 10px 0;
+    background-color: #f5f5f5;
+    box-shadow: 0px 0px 20px rgb(0, 0, 0, 0.2);
+    padding: 5%;
 }
 
-.project_title {
+.project_keywords_block {
+    background-color: #f5f5f5;
+    box-shadow: 0px 0px 20px rgb(0, 0, 0, 0.2);
+    width: -webkit-fill-available;
+    height: auto;
+    border-radius: 3px;
+    padding: 20px; 
+}
+
+.project_procedure_block {
+    background-color: #f5f5f5;
+    box-shadow: 0px 0px 20px rgb(0, 0, 0, 0.2);
+    padding: 5%;
+}
+
+.project_title,
+.project_procedure_title {
     border-bottom: 1px solid #968a8a;
     padding: 0 0 10px 0;
 }
 
-.project_title h4 {
+
+.project_title h4,
+.project_procedure_title h4 {
     text-align: left;
     padding: 0;
     margin: 0;
 }
 
-.project_cover {
+.project_keywords_block_title, 
+.block_title,
+.one_procedure_title p {
+    font-weight: 450;
+    line-height: 2rem;
+    margin: 0 0 10px 0;
+}
+
+.project_intro {
     height: auto;
     word-wrap: break-word;
-    padding: 10px 13px ;
+    padding: 10px 13px 0px 13px;
     margin: 0;
 }
 
-.project_description {
-    display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    column-gap: 10px;
-    row-gap: 50px;
-    justify-items: center;
-}
-
-.project_description .pd_block {
-    width: 240px;
-    border: 1px solid #968a8a;
-    border-radius: 5px;
-    padding: 10px; 
-}
-
-.project_description .pd_block p, 
-.project_description .pd_block li {
+.project_keywords_block li {
     font-style: italic;
+}
+
+.project_procedure_content {
+    display: grid; 
+    grid-template-rows: repeat(auto-fit, minmax(auto, 1fr));
+    row-gap: 40px;
+    margin: 50px 0 0 0;
+}
+
+
+.one_procedure_content {
+    display: none;
+}
+
+.one_procedure_title {
+    background-color: #d0d0d0;
+    border-bottom: 1px solid #baacac;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 5px 15px;
+}
+
+.one_procedure_title p {
+    font-weight: 450;
+    line-height: 2rem;
+    padding: 0;
+    margin: 0;
 }
 
 p {
@@ -53,20 +112,39 @@ p {
     hyphens: auto;
 }
 
-.mermaid tspan {
-    font-size: 1.8rem;
+
+.intersection:hover {
+    cursor: pointer; 
 }
-.mermaid circle {
-    r: 70;
+
+.one_procedure_title {
+    cursor: pointer; 
 }
-.mermaid rect {
-    width: 200;
-    height: 100;
+
+.active {
+    transform: scale(2);
+    background-color: #f5f5f5;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.5);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(2);
+    padding: 3%;
 }
 
 
-@media screen and (max-width: 700px) {
-    .project_description {
-        grid-template-columns: 1fr;
+@media screen and (max-width: 713px) {
+    .project_keywords_container {
+        row-gap: 20px;
+    }
+
+    .project_procedure_content {
+        row-gap: 25px;
+        margin: 30px 0 0 0;
+    }
+
+    .one_procedure_title p {
+        font-weight: 400;
+        line-height: 1.3rem;
     }
 }
