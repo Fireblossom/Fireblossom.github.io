@@ -1,6 +1,9 @@
 html {
     text-align: -webkit-center;
     width: 100%;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;  
 }
 
 body {
@@ -31,7 +34,7 @@ main {
     overflow-wrap: normal;
     justify-content: center;
     margin: 0;
-    padding: 5px 3% 5px 3%;
+    padding: 5px 0 5px 0;
 }
 
 .left_profilo {
@@ -87,10 +90,14 @@ a {
 h1, h2, h3, h4 {
     font-weight: 450;
     line-height: 2rem;
+    padding: 0;
+    margin: 0;
 }
 
 h5{
     font-weight: 400;
+    padding: 0;
+    margin: 0;
 }
 
 li, p {
@@ -99,6 +106,7 @@ li, p {
     font-weight: 300;
     text-align: justify;
     hyphens: auto;
+    color:rgb(68, 68, 68);
     margin: 0;
 }
 
@@ -120,6 +128,7 @@ li::before {
 }
 
 footer {
+    position: static;
     align-items: center;
     height: 40px;
     color: rgb(0, 0, 0);
@@ -148,6 +157,10 @@ footer p {
         margin: 8px 0 0 0;
     }
 
+    main {
+        padding: 25px 5% 25px 5%;
+    }
+
     .name_card_container {
         grid-template-columns: 1fr;
         row-gap: 30px;
@@ -161,9 +174,7 @@ footer p {
         padding: 10px 2% 10px 2%
     }
 
-    main {
-        padding: 25px 3% 25px 3%;
-    }
+    
 
     footer {
         margin: 0 5%;
@@ -172,7 +183,9 @@ footer p {
 }
 
 @media screen and (max-width: 500px) {
-    main a, li, p {
+    main #a_text, 
+    main li, 
+    main p {
         font-size: 0.8rem;
         line-height: 1.4rem;
     }

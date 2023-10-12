@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/project.css">
-    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="../js/navigation.js"></script>
     <title>Changxu Duan</title>
 </head>
@@ -24,82 +24,86 @@
             <div class="project_block">
                 <div class="project_title"><h4>NLP for Academic Publication: <br>&nbsp&nbsp&nbsp&nbsp
                     Finding Cross-disciplinary Connections</h4></div>
-                <div class="project_cover">
+                <div class="project_intro">
                     <p style="margin: 0 0 0 17px;">▪▪▫▫▫▫▫▫▫▫</p>
                     <ul>
                         <li>Focuses on using Natural Language Processing (NLP) to analyze academic publications</li>
-                        <li>Scans research papers to find intersections appear across different fields</li>
+                        <li>Scans academicpublication to find intersections appear across different fields</li>
                         <li>Offers insights into areas where researchers might collaborate or share resources</li>
                     </ul>
                 </div>
             </div>
+        </div>
 
-            <div class="project_description">
-                <div class="pd_block" id="academic publication">
-                    <p>Academic Publication</p>
-                    <ul>
-                        <li>Books</li>
-                        <li>Newsletters & Journal</li>
-                        <li>Theses & Dissertations</li>
-                        <li>Conference Proceedings</li>
-                        <li>Posters</li>
-                        <li>Reviews</li>
-                        <li>Teaching Materials</li>
-                        <li>Patents</li>
-                        <li>Encyclopedia Entries</li>
-                        <li>Datasets</li>
-                        <li>Software & Code</li>
-                    </ul>
+        <div class="project_keywords_container">
+            <div class="project_keywords_block" id="academic publication">
+                <p class="project_keywords_block_title">Academic Publication</p>
+                <ul>
+                    <li>Books</li>
+                    <li>Newsletters & Journal</li>
+                    <li>Theses & Dissertations</li>
+                    <li>Conference Proceedings</li>
+                    <li>Posters</li>
+                    <li>Reviews</li>
+                    <li>Teaching Materials</li>
+                    <li>Patents</li>
+                    <li>Encyclopedia Entries</li>
+                    <li>Datasets</li>
+                    <li>Software & Code</li>
+                </ul>
+            </div>
+
+            <div class="project_keywords_block" id="intersections">
+                <p class="project_keywords_block_title">Intersections</p>
+                <ul>
+                    <li>Research Objectives</li>
+                    <li>Theoretical Framework</li>
+                    <li>Research Tools & Technologies</li>
+                    <li>Datasets</li>
+                    <li>Study Populations</li>
+                    <li>Challenges and Limitations</li>
+                    <li>Funding and Resources</li>
+                    <li>Historical Context</li>
+                    <li>Ethical Considerations</li>
+                    <li>Societal Impacts</li>
+                </ul>
+            </div>
+
+            <div class="project_keywords_block" id="insights">
+                <p class="project_keywords_block_title">Insights</p>
+                <div class="intersection">
+                    <img src="../img/intersection.png" alt="intersection" style="width: 200px;">
                 </div>
+            </div>
+        </div>
 
-                <div class="pd_block" id="intersections">
-                    <p>Intersections of Cross-disciplinary</p>
-                    <ul>
-                        <li>Research Objectives</li>
-                        <li>Theoretical Framework</li>
-                        <li>Research Tools & Technologies</li>
-                        <li>Datasets</li>
-                        <li>Study Populations</li>
-                        <li>Challenges and Limitations</li>
-                        <li>Funding and Resources</li>
-                        <li>Historical Context</li>
-                        <li>Ethical Considerations</li>
-                        <li>Societal Impacts</li>
-                    </ul>
-                </div>
+        <div class="project_procedure_container">
+            <div class="project_procedure_block">
+                <div class="project_procedure_title"><h4>Procedure</h4></div>
+                <div class="project_procedure_content">
+                    <div class="one_procedure_title"><p>procedure 1</p></div>
+                    <div class="one_procedure_content">
+                        <p>Content for procedure 1</p>
+                    </div>
 
-                <div class="pd_block" id="insights">
-                    <p>Insights</p>
-                    <div class="mermaid">
-                        %%{
-                            init: {
-                              'theme': 'base',
-                              'themeVariables': {
-                                'primaryColor': '#CCE5FF',
-                                'primaryTextColor': '#000000',
-                                'primaryBorderColor': '#000000',
-                                'lineColor': '#000000',
-                                'secondaryColor': '#E5CCFF',
-                                'tertiaryColor': '#FFFFCC'
-                              }
-                            }
-                          }%%
+                    <div class="one_procedure_title"><p>procedure 2</p></div>
+                    <div class="one_procedure_content">
+                        <p>Content for procedure 2</p>
+                    </div>
 
-                        mindmap
-                        root((CNN))
-                            ((Natural Language Processing))
-                                (Documents Classification)
-                                (Intents Reconition)
-                                (Emotion Analysis)
-                        
-                            ((Robotics))
-                                (Gesture Recognition)
-                                (Object Manipulation)
+                    <div class="one_procedure_title"><p>procedure 3</p></div>
+                    <div class="one_procedure_content">
+                        <p>Content for procedure 3</p>
+                    </div>
 
-                            ((Computer Vision))
-                                (Object Detection)
-                                (Style Transfer)
-                                (Image Classification)
+                    <div class="one_procedure_title"><p>procedure 4</p></div>
+                    <div class="one_procedure_content">
+                        <p>Content for procedure 4</p>
+                    </div>
+
+                    <div class="one_procedure_title"><p>procedure 5</p></div>
+                    <div class="one_procedure_content">
+                        <p>Content for procedure 5</p>
                     </div>
                 </div>
             </div>
@@ -112,7 +116,37 @@
     </footer>
 
     <script>
-        mermaid.initialize({startOnLoad:true});
+        document.addEventListener('DOMContentLoaded', function() {
+            const mermaidDiv = document.querySelector('.intersection');
+            
+            mermaidDiv.addEventListener('click', function(event) {
+                event.stopPropagation(); // Prevent this click from being propagated to document
+                this.classList.toggle('active');
+            });
+
+            document.addEventListener('click', function() {
+                mermaidDiv.classList.remove('active');
+            });
+        });
+
+        $(document).ready(function() {
+            $('.one_procedure_title').click(function() {
+                // Find the corresponding content div for the clicked .one_procedure div
+                var contentDiv = $(this).next('.one_procedure_content');
+
+                // If the content div is already visible, hide it, otherwise, show it and hide others
+                if (contentDiv.is(':visible')) {
+                    contentDiv.hide();
+                } else {
+                    // Hide all content divs
+                    $('.one_procedure_content').hide();
+                    // Show the corresponding content div
+                    contentDiv.show();
+                }
+            });
+        });
+
+
     </script>    
 </body>
 </html>

@@ -38,7 +38,8 @@ body {
     margin: 0px 0 15px 0;
 }
 
-.experiment #organization, #reference_link {
+.experiment #organization, 
+.experiment #reference_link {
     font-style: oblique 50deg;
     margin: 0 0 5px 0;
 }
@@ -117,19 +118,23 @@ li::before {
 }
 
 .download {
-    text-align:right;
+    text-align: right;
     padding: 0 0 40px 0;
     margin: 0;
 }
 
 button {
+    align-items: center;
+    align-content: center;
     height: 38px;
-    width: 120px;
+    width: 140px;
     border: 1px solid rgb(22, 22, 22);
     box-shadow: none;
     background-color: white;
     border-radius: 0.5vh;
     transition: all 0.2s ease-in-out;
+    padding: 0;
+    margin: 0;
 }
 
 button:hover {
