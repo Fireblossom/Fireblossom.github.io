@@ -83,29 +83,37 @@
 .project_procedure_content {
     display: grid; 
     grid-template-rows: repeat(auto-fit, minmax(auto, 1fr));
-    row-gap: 40px;
+    row-gap: 35px;
     margin: 50px 0 0 0;
 }
 
-
-.one_procedure_content {
-    display: none;
-}
-
 .one_procedure_title {
-    background-color: #d0d0d0;
-    border-bottom: 1px solid #baacac;
+    display: grid;
+    grid-template-columns: 15px auto;
+    column-gap: 5px;
+    align-items: center;
+    justify-items: start;
+    background: linear-gradient(#d9d9d9 0%, 90%, #d3d2d2 99%);
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     padding: 5px 15px;
 }
 
+.rotated {
+    transform: translate(20%, 10%) rotate(90deg);
+    transition: transform 0.3s;
+}
+
 .one_procedure_title p {
-    font-weight: 450;
-    line-height: 2rem;
-    padding: 0;
+    font-weight: 400;
     margin: 0;
 }
+
+.one_procedure_content {
+    display: none;
+    padding: 0 0 0 32px;
+}
+
 
 p {
     text-align: justify;
@@ -144,7 +152,6 @@ p {
     }
 
     .one_procedure_title p {
-        font-weight: 400;
         line-height: 1.3rem;
     }
 }
