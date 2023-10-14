@@ -139,7 +139,9 @@ footer {
 
 footer p {
     text-align: center;
+    font-size: 0.9rem;
 }
+
 
 /* Responsive styles for smaller screens */
 @media screen and (max-width: 950px) {
@@ -174,10 +176,12 @@ footer p {
         padding: 10px 2% 10px 2%
     }
 
-    
-
     footer {
         margin: 0 5%;
+    }
+
+    footer p {
+        font-size: 0.8rem;
     }
 
 }
@@ -191,7 +195,6 @@ footer p {
     }
 
     h1, h2, h3, h4, h5 {
-        font-size: small;
         line-height: inherit;
     }
 }

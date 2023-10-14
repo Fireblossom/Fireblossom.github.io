@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../css/project.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="../js/navigation.js"></script>
-    <title>Changxu Duan</title>
+    <title>Changxu Duan's Projects</title>
 </head>
 <body>
     <!--<div id="logo">
@@ -58,11 +58,11 @@
                 <ul>
                     <li>Research Objectives</li>
                     <li>Theoretical Framework</li>
-                    <li>Research Tools & Technologies</li>
+                    <li>Tools & Technologies</li>
                     <li>Datasets</li>
                     <li>Study Populations</li>
-                    <li>Challenges and Limitations</li>
-                    <li>Funding and Resources</li>
+                    <li>Challenges & Limitations</li>
+                    <li>Funding & Resources</li>
                     <li>Historical Context</li>
                     <li>Ethical Considerations</li>
                     <li>Societal Impacts</li>
@@ -81,29 +81,70 @@
             <div class="project_procedure_block">
                 <div class="project_procedure_title"><h4>Procedure</h4></div>
                 <div class="project_procedure_content">
-                    <div class="one_procedure_title"><p>procedure 1</p></div>
+                    <div class="one_procedure_title">
+                        <span>▸</span> 
+                        <p>Publication Data Collection</p>
+                    </div>
                     <div class="one_procedure_content">
-                        <p>Content for procedure 1</p>
+                        <p>Challenges</p>
+                        <ul>
+                            <li>Constraints of Selection</li>
+                            <li>Copyright</li>
+                            <li>Multi-modal Storage</li>
+                        </ul>
                     </div>
 
-                    <div class="one_procedure_title"><p>procedure 2</p></div>
+                    <div class="one_procedure_title">
+                        <span>▸</span> 
+                        <p>Hierarchical Disciplinary Typology</p>
+                    </div>
                     <div class="one_procedure_content">
-                        <p>Content for procedure 2</p>
+                        <p>Challenges</p>
+                        <ul>
+                            <li>Cross-disciplinary Subject (in science)</li>
+                            <li>Deep Classification of Disciplines</li>
+                            <li>Historical Changes in Disciplinary Classifications</li>
+                        </ul>
                     </div>
 
-                    <div class="one_procedure_title"><p>procedure 3</p></div>
+                    <div class="one_procedure_title">
+                        <span>▸</span> 
+                        <p>Metadata Extraction</p>
+                    </div>
                     <div class="one_procedure_content">
-                        <p>Content for procedure 3</p>
+                        <p>Challenges</p>
+                        <ul>
+                            <li>Availability</li>
+                            <li>Existing Templates in Different Formats</li>
+                            <li>Inconsistent references <br>
+                                 e.g. one organisation is represented by different organisational names, even in different languages</li>
+                        </ul>
                     </div>
 
-                    <div class="one_procedure_title"><p>procedure 4</p></div>
+                    <div class="one_procedure_title">
+                        <span>▸</span> 
+                        <p>Intersections Extraction</p>
+                    </div>
                     <div class="one_procedure_content">
-                        <p>Content for procedure 4</p>
+                        <p>Challenges</p>
+                        <ul>
+                            <li>Segment Content Extraction</li>
+                            <li>Key Elements Extraction within Section</li>
+                            <li>Elemental Clustering</li>
+                        </ul>
                     </div>
 
-                    <div class="one_procedure_title"><p>procedure 5</p></div>
+                    <div class="one_procedure_title">
+                        <span>▸</span> 
+                        <p>Relation Mining</p>
+                    </div>
                     <div class="one_procedure_content">
-                        <p>Content for procedure 5</p>
+                        <p>Challenges</p>
+                        <ul>
+                            <li>Knowledge Graph Building</li>
+                            <li>Confidence Assessment of the Connection</li>
+                            <li>Insight Discovery</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -133,18 +174,23 @@
             $('.one_procedure_title').click(function() {
                 // Find the corresponding content div for the clicked .one_procedure div
                 var contentDiv = $(this).next('.one_procedure_content');
+                var arrowSpan = $(this).find('span');
 
                 // If the content div is already visible, hide it, otherwise, show it and hide others
                 if (contentDiv.is(':visible')) {
                     contentDiv.hide();
+                    arrowSpan.removeClass('rotated');
                 } else {
-                    // Hide all content divs
+                    // Hide all content divs and remove rotated class from all arrows
                     $('.one_procedure_content').hide();
-                    // Show the corresponding content div
+                    $('.one_procedure_title span').removeClass('rotated');
+                    // Show the corresponding content div and rotate the arrow
                     contentDiv.show();
+                    arrowSpan.addClass('rotated');
                 }
             });
         });
+
 
 
     </script>    
