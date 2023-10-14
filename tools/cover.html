@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/cv.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+        <title>Changxu Duan's Curriculum Vitae</title>
+    </head>
+    <body>
+        <div class="download">
+            <button onclick="downloadPDF()">
+                <span style="display:grid; grid-template-columns: 15px 98px; column-gap: 3px; padding: 0 10px;">
+                    <img src="../img/printer.png" alt="printer" style="width: 15px;">
+                    &nbsp Download PDF
+                </span>
+            </button>
+        </div>
+        <div class="container">
+            <div class="title">
+                <h2>Changxu Duan</h2>
+                <h4 style="font-weight: 400; font-style: oblique 50deg; margin: 0 0 100px 0">NLP Researcher</h4>
+            </div>
+
+            <div class="all_content" style="column-gap: 50px">
+                <div class="left-content">
+                    <div class="one-block" id="Contact">
+                        <h4>Contact</h4>
+                        <div class="icon_description">
+                            <img src="../img/location.png" alt="location" style="height: 13px;">
+                            <p>Darmstadt, Hessen, Germany</p>
+                        </div>
+
+                        <div class="icon_description">
+                            <img src="../img/linkedin.png" alt="linkedin" style="height: 12.8px;">
+                            <a href="https://www.linkedin.com/in/changxu-duan/"><p>linkedin.com/in/changxu-duan/</p></a>
+                        </div>
+
+                        <div class="icon_description">
+                            <img src="../img/github.png" alt="website" style="height: 13px;">
+                            <a href="https://fireblossom.github.io/"><p>https://fireblossom.github.io/</p></a>
+                        </div>
+
+                        <div class="icon_description">
+                            <img src="../img/email.png" alt="email" style="height: 13px;">
+                            <p>changxu.duan@foxmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="one-block">
+                        <div>
+                            <h4>From</h4>
+                            <h5 style="margin: 0 0 5px 0;">Changxu Duan</h5>
+                            <p>
+                                Address 1st line <br>
+                                Address 2nd line <br>
+                                Address 3rd line
+                            </p>
+                        </div>
+                        <br>
+                        <div>
+                            <h4>To</h4>
+                            <h5 style="margin: 0 0 5px 0;">Name</h5>
+                            <p>
+                                Address 1st line <br>
+                                Address 2nd line <br>
+                                Address 3rd line
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="right-content">
+                    <div  class="one-block" id="letter_content">
+                        <h4>Dear Ms./Mr. X</h4>
+                        <p>Content...
+                            <br>...
+                            <br>...
+                            <br>...
+                            <br>...
+                            <br>Warm Regards,
+                        </p>
+                    </div>
+
+                    <div class="one-block" style="margin: 0 0 10px 0;">
+                        <h5>Changxu Duan</h5>
+                    </div>
+
+                    <div class="one-block">
+                        <h5 id="current_date">Date</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
+<script>
+    function downloadPDF() {
+
+        var links = document.querySelectorAll('.container a');
+        for (var i = 0; i < links.length; i++) {
+            links[i].style.color = 'black';
+            links[i].style.textDecoration = 'underline';
+            links[i].style.fontSize = '0.7rem';
+        }
+        
+        var element = document.querySelector('.container');
+        html2pdf(element, {
+            margin: 10,
+            filename: 'Changxu_Duan_CoverLetter.pdf',
+            image: { type: 'png', quality: 0.98 },
+            enableLinks: true,
+            html2canvas: { scale: 1.4, logging: true, dpi: 100, letterRendering: true },
+            jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+        });
+    }
+
+    window.onload = function() {
+        const currentDate = new Date();
+
+        // Function to format the date
+        function formatDate(date) {
+            const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+            const dayName = days[date.getDay()];
+            const monthName = months[date.getMonth()];
+            const dayOfMonth = date.getDate();
+            const year = date.getFullYear();
+
+            return `${dayName}, ${monthName}, ${dayOfMonth} ${year}`;
+        }
+
+        document.getElementById("current_date").textContent = formatDate(currentDate);
+    }
+
+
+</script>
