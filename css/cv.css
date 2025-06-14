@@ -14,28 +14,37 @@ body {
 
 .title {
     align-items: center;
-    text-align: center;
-    margin: 0 0 40px 0;
+    text-align: left;
+    margin: 0 0 20px 0;
 }
 
-.all_content {
+.two_col_header {
     display: grid;
-    grid-template-columns: 28% auto;
+    grid-template-columns: 70% auto;
+    column-gap: 20px;
+}
+
+.two_col_content {
+    display: grid;
+    grid-template-columns: 83% auto;
     column-gap: 20px;
 }
 
 
 .one-block {
-    margin: 0 0 25px 0;
+    margin: 0 0 20px 0;
 }
 
 .left-content .one-block {
-    margin: 0 0 36px 0;
+    margin: 0 0 20px 0;
 }
 
+.right-content .one-block {
+    margin: 0 0 5px 0;
+}
 
 .experiment {
-    margin: 0px 0 16px 0;
+    margin: 0px 0 6px 0;
 }
 
 .experiment #organization, 
@@ -43,14 +52,14 @@ body {
 .experiment #authors {
     font-style: oblique 50deg;
     text-align: left;
-    margin: 0 0 5px 0;
+    margin: 0 0 0px 0;
 }
 
 .icon_description {
     display: grid;
     grid-template-columns: 20px 1fr;
     align-items:center;
-    margin: 10px 0;
+    margin: 3px 0;
 }
 
 .icon_description p {
@@ -67,7 +76,7 @@ h4 {
     letter-spacing: 0.08rem;
     border-bottom: 1em;
     border-color: rgb(70, 70, 70);
-    margin: 0 0 20px 0;
+    margin: 10px 0 8px 0;
 }
 
 h5 {

@@ -9,29 +9,33 @@
         <title>Changxu Duan's Curriculum Vitae</title>
     </head>
     <body>
-        <div class="download">
+        <!--<div class="download">
             <button onclick="downloadPDF()">
                 <span style="display:grid; grid-template-columns: 15px 98px; column-gap: 3px; padding: 0 10px;">
                     <img src="./img/printer.png" alt="printer" style="width: 15px;">
                     &nbsp Download PDF
                 </span>
             </button>
-        </div>
+        </div>-->
         <div class="container">
-            <div class="title">
-                <h2>Changxu Duan</h2>
-                <h4 style="font-weight: 400; font-style: oblique 50deg;">NLP Researcher</h4>
-            </div>
-
-            <div class="all_content">
+            <div class="two_col_header">
                 <div class="left-content">
-                    <div class="one-block" id="Contact">
-                        <h4>Contact</h4>
-                        <div class="icon_description">
-                            <img src="./img/location.png" alt="location" style="height: 13px;">
-                            <p>Darmstadt, Hessen, Germany</p>
-                        </div>
-
+                    <div class="title">
+                        <h2>Changxu Duan</h2>
+                        <h4 style="font-weight: 400; font-style: oblique 50deg;">NLP Researcher</h4>
+                    </div>
+                    <!--<div  class="one-block" id="Profile">
+                        <h4>Profile</h4>
+                        <p>I am an enthusiastic researcher bridging the realms of language and AI. 
+                            With a strong penchant for knowledge mining, 
+                            I excel in deriving structured insights from unstructured data. 
+                            My expertise extends to DevOps for Large Language Models (LLM), 
+                            showcasing my commitment to harnessing cutting-edge AI solutions.</p>
+                    </div>-->
+                </div>
+                <div class="right-content">
+                    <div class="one-block" id="Contact" style="">
+                        <!--<h4>Contact</h4>-->
                         <div class="icon_description">
                             <img src="./img/linkedin.png" alt="linkedin" style="height: 12.8px;">
                             <a href="https://www.linkedin.com/in/changxu-duan/"><p>linkedin.com/in/changxu-duan/</p></a>
@@ -44,243 +48,202 @@
 
                         <div class="icon_description">
                             <img src="./img/email.png" alt="email" style="height: 13px;">
-                            <p>changxu.duan@foxmail.com</p>
+                            <a href="mailto:changxu.duan@gmx.de">changxu.duan@gmx.de</a>
                         </div>
                     </div>
-                    
-                    <div class="one-block" id="Education">
-                        <h4>Education</h4>
-                        <div class="experiment">
+                </div>
+            </div>
+
+            <div class="experiment_content">
+                <div class="one-block" id="Education">
+                    <h4>Education</h4>
+                    <div class="experiment">
+                        <div class="two_col_content">
                             <h5>PhD Student in Computaional Linguistics</h5>
-                            <p id="organization">Technical University of Darmstadt <br> 2021 - Present</p>
+                            <p>2021 - Present</p>
                         </div>
+                        <p id="organization">Technical University of Darmstadt</p>
+                    </div>
 
-                        <div class="experiment">
+                    <div class="experiment">
+                        <div class="two_col_content">
                             <h5>M.Sc. Computaional Linguistics</h5>
-                            <p id="organization">University of Stuttgart <br> 2018 - 2021</p>
+                            <p> 2018 - 2021</p>
                         </div>
+                        <p id="organization">University of Stuttgart</p> 
+                    </div>
 
-                        <div class="experiment">
+                    <div class="experiment">
+                        <div class="two_col_content">
                             <h5>B.Sc. Computer Sciences</h5>
-                            <p id="organization">Henan Normal University <br> 2014 - 2018</p>
+                            <p> 2014 - 2018</p>
                         </div>
+                        <p id="organization">Henan Normal University</p>
+                    </div>
+                </div>
+
+                <div  class="one-block" id="Work Experience">
+                    <h4>Work Experience</h4>
+                    <div class="experiment">
+                        <div class="two_col_content">
+                            <h5>Research Assistant</h5>
+                            <p> 08.2021 - Present </p>
+                        </div>
+                        <p id="organization">Darmstadt University of Technology &nbsp&nbsp&nbsp&nbsp </p>
+                        <p>BMBF-funded project
+                            <a href="https://insightsnet.org/">InsightsNet</a>, emphasizing academic publications knowledge mining.</p>
+                        <!--<ul>
+                            <li>Developed an annotation process pipeline for parsing these publications.</li>
+                            <li>Established cross-disciplinary connections based on the extracted content.</li>
+                        </ul>-->
+                        <p></p>
+                    </div>
+                        
+                    <div class="experiment">
+                        <div class="two_col_content">
+                            <h5>Machine Learning Intern</h5>
+                            <p> 04.2020 - 10.2020 </p>
+                        </div>
+                        <p id="organization">Robert Bosch GmbH &nbsp&nbsp&nbsp&nbsp </p>
+                        <p>Crafted time series models with RNNs, GANs, and VAEs for bicycle sensor predictions.</p>
+                        <!--<ul>
+                            <li>Optimized data preprocessing, model tuning, stayed abreast of ML and time series trends.</li>
+                            <li>Partnered with cross-functional teams for insights and model refinement.</li>
+                        </ul>-->
+                    </div>
+                </div>
+
+                <div  class="one-block" id="Publications">
+                    <h4>Publications</h4>
+                    
+                    <div class="experiment">
+                        <h5 style="letter-spacing: -0.55px;">Layout-Aware Text Editing for Efficient Transformation of Academic PDFs to Markdown</h5>
+                        <p id="authors"><b>Changxu Duan</b>,
+                            the 19th International Conference on Document Analysis and Recognition (ICDAR 2025) 
+                            <a href="https://github.com/Fireblossom/EditTrans"> [GitHub] </a>
+                        </p>
                     </div>
                     
-                    <div class="one-block" id="Expertise">
-                        <h4>Expertise</h4>
-                        <ul style="padding-inline-start: 15px;">
-                            <li>Machine Learning</li>
-                            <li>Deep Learning</li>
-                            <li>Natural Language Processing</li>
-                            <li>Large Language Models</li>
-                            <li>Algorithms</li>
-                            <li>DevOps</li>
-                            <li>Data Annotation</li>
-                            <li>Time Series Analysis</li>
-                        </ul>
+                    <div class="experiment">
+                        <h5 style="letter-spacing: -0.55px;">Accelerating End-to-End PDF to Markdown Conversion through Assisted Generation</h5>
+                        <p id="authors"><b>Changxu Duan</b>,
+                            the 30th Annual International Conference on Natural Language & Information Systems (NLDB 2025)
+                            <a href="https://github.com/Fireblossom/CopyLookup"> [GitHub] </a> 
+                        </p>
                     </div>
 
-                    <div class="one-block" id="Skills">
-                        <h4>Skills</h4>
-                        <ul style="padding-inline-start: 15px;">
-                            <li>Python | Java | C | C++</li>
-                            <li>Django | Flask | Streamlit</li>
-                            <li>PyTorch | Huggingface</li>
-                            <li>Spacy | NLTK | Stanza</li>
-                            <li>Numpy | Scikit-learn</li>
-                            <li>SQL | SPARQL</li>
-                            <li>MySQL | ArangoDB</li>
-                            <li>Git</li>
-                            <li>Docker</li>
-                            <li>Bash | PowerShell</li>
-                        </ul>
+                    <div class="experiment">
+                        <h5 style="letter-spacing: -0.55px;">Bridging scientific publication accessibility: LaTeX-markup-PDF-alignment</h5>
+                        <p id="authors"><b>Changxu Duan</b>,
+                            the Communications of the TeX Users Group (TUGboat) 45:2, 2024. 
+                            <a href="doi.org/10.47397/tb/45-2/tb140duan-bridging"> [Paper] </a>
+                            <a href="https://tug.org/tug2024/slides/duan-bridging.pdf"> [Slides] </a>
+                        </p>
                     </div>
 
-                    <div class="one-block" id="Languages">
-                        <h4>Languages</h4>
-                        <ul style="padding-inline-start: 15px;">
-                            <li>Chinese Native</li>
-                            <li>English C1</li>
-                            <li>German B1</li>
+                    <div class="experiment">
+                        <h5 style="letter-spacing: -0.55px;">LATEX Rainbow: Universal LATEX to PDF Document Semantic & Layout Annotation Framework</h5>
+                        <p id="authors"><b>Changxu Duan</b>, Zhiyin Tan, Sabine Bartsch, 
+                            the second Workshop on Information Extraction from Scientific Publications at IJCNLP-AACL 2023.
+                            <a href="https://doi.org/10.18653/v1/2023.wiesp-1.8"> [Paper] </a>
+                            <a href="https://github.com/InsightsNet/texannotate"> [GitHub] </a>
+                        </p>
                     </div>
 
-                    <div class="one-block" id="Awards">
-                        <h4>Awards</h4>
-                        <div class="experiment">
-                            <h5>First Award</h5>
-                            <p id="organization">Lan Qiao Algorithmic Competition <br> 2017</p>
-                        </div>
-
-                        <div class="experiment">
-                            <h5>Bronze Medal</h5>
-                            <p id="organization">ACM-ICPC in Henan Province <br> 2017</p>
-                        </div>
-
-                        <div class="experiment">
-                            <h5>First Award</h5>
-                            <p id="organization">Underwater Robot Competition <br> 2016</p>
-                        </div>
-
-                        <div class="experiment">
-                            <h5>Third Award</h5>
-                            <p id="organization">RoboCup China Open<br> 2016</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="right-content">
-                    <div  class="one-block" id="Profile">
-                        <h4>Profile</h4>
-                        <p>I am an enthusiastic researcher bridging the realms of language and AI. 
-                            With a strong penchant for knowledge mining, 
-                            I excel in deriving structured insights from unstructured data. 
-                            My expertise extends to DevOps for Large Language Models (LLM), 
-                            showcasing my commitment to harnessing cutting-edge AI solutions.</p>
+                    <div class="experiment">
+                        <h5 style="letter-spacing: -0.5px;">Presenting an Annotation Pipeline for Fine-grained Linguistic Analyses of Multimodal Corpora</h5>
+                        <p id="authors">Elena Volkanovska, Sherry Tan, <b>Changxu Duan</b>, Debajyoti Paul Chowdhury, Sabine Bartsch,
+                            the first Workshop on Linguistic Insights from and for Multimodal Language Processing at KONVENS 2023.
+                            <a href="https://aclanthology.org/2023.limo-1.6/"> [Paper] </a>
+                        </p>
                     </div>
 
-                    <div  class="one-block" id="Work Experience">
-                        <h4>Work Experience</h4>
-                        <div class="experiment">
-                            <h5>Research Assistant</h5>
-                            <p id="organization">Darmstadt University of Technology &nbsp&nbsp&nbsp&nbsp 08.2021 - Present</p>
-                            <p>BMBF-funded project
-                                <a href="https://insightsnet.org/">InsightsNet</a>, emphasizing academic publications knowledge mining.</p>
-                            <ul>
-                                <li>Developed an annotation process pipeline for parsing these publications.</li>
-                                <li>Established cross-disciplinary connections based on the extracted content.</li>
-                            </ul>
-                            <p></p>
-                        </div>
-                        
-                        <div class="experiment">
-                            <h5>Machine Learning Intern</h5>
-                            <p id="organization">Robert Bosch GmbH &nbsp&nbsp&nbsp&nbsp 04.2020 - 10.2020</p>
-                            <p>Crafted time series models with RNNs, GANs, and VAEs for bicycle sensor predictions.</p>
-                            <ul>
-                                <li>Optimized data preprocessing, model tuning, stayed abreast of ML and time series trends.</li>
-                                <li>Partnered with cross-functional teams for insights and model refinement.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div  class="one-block" id="Publications">
-                        <h4>Publications</h4>
-                        
-                        <div class="experiment">
-                            <h5 style="letter-spacing: -0.55px;">Layout-Aware Text Editing for Efficient Transformation of Academic PDFs to Markdown</h5>
-                            <p id="authors"><b>Changxu Duan</b>,
-                              In Proceedings of the 19th International Conference on Document Analysis and Recognition (ICDAR 2025) </p>
-                              <a href="https://github.com/Fireblossom/EditTrans"> [GitHub] </a>
-                        </div>
-                        
-                        <div class="experiment">
-                            <h5 style="letter-spacing: -0.55px;">Accelerating End-to-End PDF to Markdown Conversion through Assisted Generation</h5>
-                            <p id="authors"><b>Changxu Duan</b>,
-                               In Proceedings of the 30th Annual International Conference on Natural Language & Information Systems (NLDB 2025) </p>
-                               <a href="https://github.com/Fireblossom/CopyLookup"> [GitHub] </a>
-                        </div>
-
-                        <div class="experiment">
-                            <h5 style="letter-spacing: -0.55px;">Bridging scientific publication accessibility: LaTeX-markup-PDF-alignment</h5>
-                            <p id="authors"><b>Changxu Duan</b>,
-                            The Communications of the TeX Users Group (TUGboat) 45:2, 2024. 
-                                <a href="doi.org/10.47397/tb/45-2/tb140duan-bridging"> [Paper] </a>
-                                <a href="https://tug.org/tug2024/slides/duan-bridging.pdf"> [Slides] </a>
-                            </p>
-                        </div>
-
-                        <div class="experiment">
-                            <h5 style="letter-spacing: -0.55px;">LATEX Rainbow: Universal LATEX to PDF Document Semantic & Layout Annotation Framework</h5>
-                            <p id="authors"><b>Changxu Duan</b>, Zhiyin Tan, Sabine Bartsch, 
-                                In Proceedings of the second Workshop on Information Extraction from Scientific Publications at IJCNLP-AACL 2023.
-                                <a href="https://doi.org/10.18653/v1/2023.wiesp-1.8"> [Paper] </a>
-                                <a href="https://github.com/InsightsNet/texannotate"> [GitHub] </a>
-                            </p>
-                        </div>
-
-                        <div class="experiment">
-                            <h5 style="letter-spacing: -0.5px;">Presenting an Annotation Pipeline for Fine-grained Linguistic Analyses of Multimodal Corpora</h5>
-                            <p id="authors">Elena Volkanovska, Sherry Tan, <b>Changxu Duan</b>, Debajyoti Paul Chowdhury, Sabine Bartsch,
-                                In Proceedings of the first Workshop on Linguistic Insights from and for Multimodal Language Processing at KONVENS 2023.
-                                <a href="https://aclanthology.org/2023.limo-1.6/"> [Paper] </a>
-                            </p>
-                        </div>
-
-                        <div class="experiment">
-                            <h5>The InsightsNet Climate Change Corpus (ICCC)</h5>
-                            <p id="authors">Sabine Bartsch, <b>Changxu Duan</b>, Sherry Tan, Elena Volkanovska, Wolfgang Stille, 
+                    <div class="experiment">
+                        <h5>The InsightsNet Climate Change Corpus (ICCC)</h5>
+                        <p id="authors">Sabine Bartsch, <b>Changxu Duan</b>, Sherry Tan, Elena Volkanovska, Wolfgang Stille, 
                             Journal of Datenbank-Spektrum, 2023.
-                                <a href="http://doi.org/10.1007/s13222-023-00454-1"> [Paper] </a>
-                            </p>
-                        </div>
-
+                            <a href="http://doi.org/10.1007/s13222-023-00454-1"> [Paper] </a>
+                        </p>
                     </div>
 
-                    <div  class="one-block" id="Project">
-                        <h4>Projects & Tools</h4>
-                        <div class="experiment">
-                            <h5>Explaining the idea of language model generation through Jabber and entity linking</h5>
-                            <p id="organization">Poster presentation at Machine Learning Operations Summer School 2022</p>
-                            <p></p>
-                            <ul>
-                                <li>The generation of language models is often hallucinatory and imprecise.</li>
-                                <li>Attempt to validate generation by controlling the language model to babble on the same problem, together with entity linking to knowledge graph to validate the output of the language model.</li>
-                            </ul>
-                        </div>
-                        <div class="experiment">
-                            <h5>Semi-supervised Event-centered Emotion Analysis and Performance Prediction</h5>
-                            <p id="organization">Master Thesis at Robert Bosch GmbH</p>
-                            <p>Investigated event-centered emotion analysis applicability in Semi-supervised Learning.</p>
-                            <ul>
-                                <li>Designed a method using similarity to select unlabeled data, manage clustering attributes.</li>
-                                <li>Identified key attributes of SSL Emotion Analysis tasks for performance prediction.</li>
-                            </ul>
-                        </div>
-
-                        <div class="experiment"">
-                            <h5>RainbowLaTeX Annotator</h5>
-                            <a href="https://github.com/InsightsNet/texannotate">
-                                <p id="reference_link">https://github.com/InsightsNet/texannotate</p></a>
-                            <p>Transforms LaTeX codes into detailed PDF layouts, specifically for academic publications.</p>
-                            <ul>
-                                <li>LaTeX Compilation: transformed LaTeX to PDF with dockerized TexLive2023.</li>
-                                <li>LaTeX Annotation: applied color-labels to LaTeX elements for layout extraction.</li>
-                                <li>Data Extraction: extracted text & figures from PDFs, identifying both types and positions.</li>
-                            </ul>
-                        </div>
-
-                        <div class="experiment">
-                            <h5>SPARQL Auto-Completion (VS Code)</h5>
-                            <a href="https://github.com/Fireblossom/sparql-auto-completion">
-                                <p id="reference_link">https://github.com/Fireblossom/sparql-auto-completion</p></a>
-                            <p>VS Code extension provides language support for SPARQL queries with two main functionalities.</p>
-                            <ul>
-                                <li>Auto-complete prefix: When typing a prefix (e.g., `foaf:`), it automatically completes the full prefix declaration (`PREFIX foaf: <http://xmlns.com/foaf/0.1/>`) in the file header.</li>
-                                <li>IntelliSense for terms: Provides intelligent suggestions for classes and properties.</li>
-                            </ul>
-                        </div>
-                        <!--
-                        <div class="experiment">
-                            <h5>CRNN Speech Emotion Detector</h5>
-                            <a href="https://github.com/Fireblossom/DeepDarkHomework">
-                                <p id="reference_link">https://github.com/Fireblossom/DeepDarkHomework</p></a>
-                            <p>A Neural Network to predict emotion from MFCC features of time-series speech data.</p>
-                            <ul>
-                                <li>Based on VAD (Valence-Arousal-Dominance) model, which is a regression task.</li>
-                                <li>Model consists of a time distributional 1D CNN and GRU in Kera.</li>
-                                <li>The accuracy of the model is about 71%.</li>
-                            </ul>
-                        </div>
-                        <div class="experiment">
-                            <h5>Wiener filter for microphone arrays</h5>
-                            <p>Speech enhancement and noise reduction on a 6-microphone array system in MATLAB.</p>
-                            <ul>
-                                <li>Determine the speaking direction by the sound delay recorded by the microphone array.</li>
-                                <li>Filter background noise and enhance speech in the direction of speaking with Wiener filters.</li>
-                            </ul>
-                        </div>
-                        -->
-                    </div>
                 </div>
+
+                <div  class="one-block" id="Project">
+                    <h4>Projects & Tools</h4>
+                    <div class="experiment">
+                        <h5>Explaining the idea of language model generation through Jabber and entity linking</h5>
+                        <p id="organization">Poster presentation at Machine Learning Operations Summer School 2022</p>
+                        <p>This work addresses the hallucinatory and imprecise nature of language model generation by using controlled generation (“babbling”) on the same problem and validating outputs through entity linking to a knowledge graph.
+                        
+                    </div>
+                    <div class="experiment">
+                        <h5>Semi-supervised Event-centered Emotion Analysis and Performance Prediction</h5>
+                        <p id="organization">Master Thesis at Robert Bosch GmbH</p>
+                        <p>This work explores event-centered emotion analysis in semi-supervised learning by designing a similarity-based method for unlabeled data selection and clustering, and identifying key task attributes for performance prediction.
+                        </p>
+                    </div>
+
+                    <!--
+                    <div class="experiment"">
+                        <h5>RainbowLaTeX Annotator</h5>
+                        <a href="https://github.com/InsightsNet/texannotate">
+                            <p id="reference_link">https://github.com/InsightsNet/texannotate</p></a>
+                        <p>Developed a tool that transforms LaTeX code into annotated PDF layouts for academic publications by compiling with Dockerized TeXLive2023, applying color-based annotations, and extracting structured text and figure data with positional metadata.
+                        </p>
+                    </div>-->
+
+                    <div class="experiment">
+                        <h5>SPARQL Auto-Completion (VS Code)</h5>
+                        <p>Developed a VS Code extension offering SPARQL language support through automatic prefix completion and IntelliSense suggestions for classes and properties.
+                        <a href="https://github.com/Fireblossom/sparql-auto-completion">[GitHub]</a>
+                        </p>
+                    </div>
+
+                    <!--
+                    <div class="experiment">
+                        <h5>CRNN Speech Emotion Detector</h5>
+                        <a href="https://github.com/Fireblossom/DeepDarkHomework">
+                            <p id="reference_link">https://github.com/Fireblossom/DeepDarkHomework</p></a>
+                        <p>A Neural Network to predict emotion from MFCC features of time-series speech data.</p>
+                        <ul>
+                            <li>Based on VAD (Valence-Arousal-Dominance) model, which is a regression task.</li>
+                            <li>Model consists of a time distributional 1D CNN and GRU in Kera.</li>
+                            <li>The accuracy of the model is about 71%.</li>
+                        </ul>
+                    </div>
+                    <div class="experiment">
+                        <h5>Wiener filter for microphone arrays</h5>
+                        <p>Speech enhancement and noise reduction on a 6-microphone array system in MATLAB.</p>
+                        <ul>
+                            <li>Determine the speaking direction by the sound delay recorded by the microphone array.</li>
+                            <li>Filter background noise and enhance speech in the direction of speaking with Wiener filters.</li>
+                        </ul>
+                    </div>
+                    -->
+                </div>
+
+                <div class="one-block" id="Languages & Awards">
+                    <h4>Languages & Awards</h4>
+                    <ul style="padding-inline-start: 15px;">
+                        <li>Chinese Native, English C1, German B1</li>
+                        <li>First Award of Lan Qiao Algorithmic Competition in 2017;
+                            Bronze Medal of ACM-ICPC in Henan Province in 2017;
+                            First Award of Underwater Robot Competition in 2016;
+                            Third Award of RoboCup China Open in 2016.
+                        </li>
+                </div>
+
+                <!--<div class="one-block" id="Awards">
+                    <h4>Awards</h4>
+                    <div class="experiment">
+                        <p id="organization">
+                            First Award of Lan Qiao Algorithmic Competition in 2017;
+                            Bronze Medal of ACM-ICPC in Henan Province in 2017;
+                            First Award of Underwater Robot Competition in 2016;
+                            Third Award of RoboCup China Open in 2016.
+                        </p>
+                    </div>
+                </div>-->
             </div>
         </div>
     </body>
@@ -295,7 +258,6 @@
             links[i].style.textDecoration = 'underline';
             links[i].style.fontSize = '0.7rem';
         }
-        
         var element = document.querySelector('.container');
         html2pdf(element, {
             margin: 10,
