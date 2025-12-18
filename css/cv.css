@@ -1,11 +1,92 @@
+:root {
+    --acm-serif: "Linux Libertine", "Linux Libertine O", "Times New Roman", serif;
+    --acm-sans: "Linux Biolinum", "Linux Biolinum O", "Helvetica Neue", Arial, sans-serif;
+}
+
+@font-face {
+    font-family: "Linux Libertine";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local("Linux Libertine O"), local("Linux Libertine O Regular"),
+         url("../fonts/LinuxLibertineORegular.otf") format("opentype");
+}
+@font-face {
+    font-family: "Linux Libertine";
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: local("Linux Libertine O Italic"),
+         url("../fonts/LinuxLibertineOItalic.otf") format("opentype");
+}
+@font-face {
+    font-family: "Linux Libertine";
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: local("Linux Libertine O Semibold"),
+         url("../fonts/LinuxLibertineOSemibold.otf") format("opentype");
+}
+@font-face {
+    font-family: "Linux Libertine";
+    font-style: italic;
+    font-weight: 600;
+    font-display: swap;
+    src: local("Linux Libertine O Semibold Italic"),
+         url("../fonts/LinuxLibertineOSemiboldItalic.otf") format("opentype");
+}
+@font-face {
+    font-family: "Linux Libertine";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: local("Linux Libertine O Bold"),
+         url("../fonts/LinuxLibertineOBold.otf") format("opentype");
+}
+@font-face {
+    font-family: "Linux Libertine";
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap;
+    src: local("Linux Libertine O Bold Italic"),
+         url("../fonts/LinuxLibertineOBoldItalic.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Linux Biolinum";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local("Linux Biolinum O Regular"),
+         url("../fonts/LinuxBiolinumORegular.otf") format("opentype");
+}
+@font-face {
+    font-family: "Linux Biolinum";
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: local("Linux Biolinum O Italic"),
+         url("../fonts/LinuxBiolinumOItalic.otf") format("opentype");
+}
+@font-face {
+    font-family: "Linux Biolinum";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: local("Linux Biolinum O Bold"),
+         url("../fonts/LinuxBiolinumOBold.otf") format("opentype");
+}
+
 body {
     align-items: center;
-    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
-    font-size: 0.9rem; line-height: 1.1rem; font-weight: 250;font-style:normal;letter-spacing:0;
-    width: 718px;
+    font-family: var(--acm-serif);
+    color: #1a1a1a;
+    font-size: 0.88rem; line-height: 1.3rem; font-weight: 400; font-style: normal; letter-spacing: 0;
+    width: 100%;
+    max-width: 760px;
     height: auto;
     margin: auto;
-    padding: 5%;
+    padding: 5% 4%;
 }
 
 .container {
@@ -18,29 +99,45 @@ body {
     margin: 0 0 20px 0;
 }
 
+.title h2 {
+    font-family: var(--acm-sans);
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    font-size: 1.75rem;
+    margin-bottom: 3px;
+}
+
+.title h4 {
+    font-family: var(--acm-sans);
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    color: #424242;
+    margin: 0;
+}
+
 .two_col_header {
     display: grid;
-    grid-template-columns: 70% auto;
-    column-gap: 20px;
+    grid-template-columns: 68% auto;
+    column-gap: 16px;
 }
 
 .two_col_content {
     display: grid;
-    grid-template-columns: 83% auto;
-    column-gap: 20px;
+    grid-template-columns: 80% auto;
+    column-gap: 14px;
 }
 
 
 .one-block {
-    margin: 0 0 20px 0;
+    margin: 0 0 16px 0;
 }
 
 .left-content .one-block {
-    margin: 0 0 20px 0;
+    margin: 0 0 16px 0;
 }
 
 .right-content .one-block {
-    margin: 0 0 5px 0;
+    margin: 0 0 4px 0;
 }
 
 .experiment {
@@ -50,7 +147,8 @@ body {
 .experiment #organization, 
 .experiment #reference_link,
 .experiment #authors {
-    font-style: oblique 50deg;
+    font-style: italic;
+    letter-spacing: 0.01em;
     text-align: left;
     margin: 0 0 0px 0;
 }
@@ -67,25 +165,32 @@ body {
 }
 
 h1, h2, h3 {
-    font-weight: 450;
+    font-family: var(--acm-sans);
+    font-weight: 600;
+    letter-spacing: 0.01em;
     margin: 0 0 8px 0;
 }
 
 h4 {
-    font-weight: 500;
-    letter-spacing: 0.08rem;
-    border-bottom: 1em;
-    border-color: rgb(70, 70, 70);
-    margin: 10px 0 8px 0;
+    font-family: var(--acm-sans);
+    font-weight: 700;
+    letter-spacing: 0.12rem;
+    text-transform: uppercase;
+    border-bottom: 1px solid #d7d7d7;
+    padding-bottom: 6px;
+    margin: 12px 0 8px 0;
 }
 
 h5 {
-    font-weight: 450;
+    font-family: var(--acm-sans);
+    font-weight: 600;
+    letter-spacing: 0.01em;
     margin: 0;
 }
 
 li, p {
     font-size: 0.7rem;
+    line-height: 1.2rem;
     text-align: justify;
     margin: 0;
 }
@@ -159,10 +264,64 @@ button:hover {
 }
 
 @media print {
-    .body {
-        width: 60%;
+    @page {
+        size: A4 portrait;
+        margin: 8mm 10mm;
+    }
+
+    body {
+        max-width: none;
+        width: auto;
         margin: 0;
         padding: 0;
+        font-size: 0.78rem;
+        line-height: 1.12rem;
+    }
+
+    .container {
+        padding: 0;
+    }
+
+    .title h2 {
+        font-size: 1.6rem;
+        margin-bottom: 2px;
+    }
+
+    .title h4 {
+        font-size: 0.82rem;
+    }
+
+    .two_col_header {
+        grid-template-columns: 66% auto;
+        column-gap: 10px;
+    }
+
+    .two_col_content {
+        grid-template-columns: 78% auto;
+        column-gap: 8px;
+    }
+
+    .one-block {
+        margin: 0 0 10px 0;
+    }
+
+    .left-content .one-block {
+        margin: 0 0 10px 0;
+    }
+
+    h4 {
+        padding-bottom: 4px;
+        margin: 10px 0 6px 0;
+        letter-spacing: 0.08rem;
+    }
+
+    h5 {
+        font-size: 0.95rem;
+    }
+
+    li, p {
+        font-size: 0.7rem;
+        line-height: 1.1rem;
     }
 
     ul{
@@ -180,4 +339,3 @@ button:hover {
     }
 }
   
-
