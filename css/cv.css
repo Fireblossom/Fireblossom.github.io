@@ -1,6 +1,7 @@
 :root {
     --acm-serif: "Linux Libertine", "Linux Libertine O", "Times New Roman", serif;
-    --acm-sans: "Linux Biolinum", "Linux Biolinum O", "Helvetica Neue", Arial, sans-serif;
+    /* Keep CV font embedding minimal (<= 3 font files including bold/italic). */
+    --acm-sans: "Linux Libertine", "Linux Libertine O", "Times New Roman", serif;
 }
 
 @font-face {
@@ -22,66 +23,22 @@
 @font-face {
     font-family: "Linux Libertine";
     font-style: normal;
-    font-weight: 600;
-    font-display: swap;
-    src: local("Linux Libertine O Semibold"),
-         url("../fonts/LinuxLibertineOSemibold.otf") format("opentype");
-}
-@font-face {
-    font-family: "Linux Libertine";
-    font-style: italic;
-    font-weight: 600;
-    font-display: swap;
-    src: local("Linux Libertine O Semibold Italic"),
-         url("../fonts/LinuxLibertineOSemiboldItalic.otf") format("opentype");
-}
-@font-face {
-    font-family: "Linux Libertine";
-    font-style: normal;
     font-weight: 700;
     font-display: swap;
     src: local("Linux Libertine O Bold"),
          url("../fonts/LinuxLibertineOBold.otf") format("opentype");
 }
-@font-face {
-    font-family: "Linux Libertine";
-    font-style: italic;
-    font-weight: 700;
-    font-display: swap;
-    src: local("Linux Libertine O Bold Italic"),
-         url("../fonts/LinuxLibertineOBoldItalic.otf") format("opentype");
-}
-
-@font-face {
-    font-family: "Linux Biolinum";
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: local("Linux Biolinum O Regular"),
-         url("../fonts/LinuxBiolinumORegular.otf") format("opentype");
-}
-@font-face {
-    font-family: "Linux Biolinum";
-    font-style: italic;
-    font-weight: 400;
-    font-display: swap;
-    src: local("Linux Biolinum O Italic"),
-         url("../fonts/LinuxBiolinumOItalic.otf") format("opentype");
-}
-@font-face {
-    font-family: "Linux Biolinum";
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
-    src: local("Linux Biolinum O Bold"),
-         url("../fonts/LinuxBiolinumOBold.otf") format("opentype");
-}
 
 body {
     align-items: center;
-    font-family: var(--acm-serif);
+    font-family: var(--acm-sans);
     color: #1a1a1a;
-    font-size: 0.88rem; line-height: 1.3rem; font-weight: 400; font-style: normal; letter-spacing: 0;
+    font-size: 0.88rem;
+    line-height: 1.32;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.002em;
+    -webkit-font-smoothing: auto;
     width: 100%;
     max-width: 760px;
     height: auto;
@@ -96,7 +53,7 @@ body {
 .title {
     align-items: center;
     text-align: left;
-    margin: 0 0 20px 0;
+    margin: 0 0 14px 0;
 }
 
 .title h2 {
@@ -127,13 +84,19 @@ body {
     column-gap: 14px;
 }
 
+/* Right-align dates in 2-column rows (e.g., role + date) */
+.two_col_content > p {
+    text-align: right;
+    justify-self: end;
+}
+
 
 .one-block {
-    margin: 0 0 16px 0;
+    margin: 0 0 12px 0;
 }
 
 .left-content .one-block {
-    margin: 0 0 16px 0;
+    margin: 0 0 12px 0;
 }
 
 .right-content .one-block {
@@ -141,16 +104,30 @@ body {
 }
 
 .experiment {
-    margin: 0px 0 6px 0;
+    margin: 0 0 7px 0;
 }
 
 .experiment #organization, 
-.experiment #reference_link,
-.experiment #authors {
+.experiment #reference_link {
     font-style: italic;
     letter-spacing: 0.01em;
     text-align: left;
     margin: 0 0 0px 0;
+}
+
+/* Authors + venues in publication list: keep upright */
+.experiment #authors {
+    font-style: normal;
+}
+
+/* Only author names (bold) in that line should be italic */
+.experiment #authors b {
+    font-style: italic;
+}
+
+/* Keep publication links upright even when authors/venue are italic elsewhere */
+.experiment #authors a {
+    font-style: normal;
 }
 
 .icon_description {
@@ -164,6 +141,12 @@ body {
     width: inherit;
 }
 
+/* Make contact icons subtle/grey on industry CV */
+body.cv-industry .icon_description img {
+    filter: grayscale(100%);
+    opacity: 0.7;
+}
+
 h1, h2, h3 {
     font-family: var(--acm-sans);
     font-weight: 600;
@@ -174,25 +157,49 @@ h1, h2, h3 {
 h4 {
     font-family: var(--acm-sans);
     font-weight: 700;
-    letter-spacing: 0.12rem;
+    letter-spacing: 0.08rem;
     text-transform: uppercase;
     border-bottom: 1px solid #d7d7d7;
-    padding-bottom: 6px;
-    margin: 12px 0 8px 0;
+    padding-bottom: 4px;
+    margin: 10px 0 6px 0;
+}
+
+/* Slightly tighter heading for long "Open Source & Side Projects" title */
+body.cv-industry #Project h4 {
+    letter-spacing: 0.05rem;
 }
 
 h5 {
     font-family: var(--acm-sans);
     font-weight: 600;
     letter-spacing: 0.01em;
+    /* Browser defaults make <h5> smaller than <p>. Keep role titles >= body text. */
+    font-size: 0.92rem;
     margin: 0;
 }
 
 li, p {
-    font-size: 0.7rem;
-    line-height: 1.2rem;
+    font-size: 0.84rem;
+    line-height: 1.32;
     text-align: justify;
+    hyphens: auto;
+    overflow-wrap: normal;
+    word-break: normal;
     margin: 0;
+}
+
+p + p {
+    margin-top: 0.12rem;
+}
+
+ul + p,
+p + ul {
+    margin-top: 0.12rem;
+}
+
+h5 + p,
+.two_col_content + p {
+    margin-top: 0.1rem;
 }
 
 hr {
@@ -215,7 +222,7 @@ li::before {
     content: '•';
     position: absolute;
     left: -1rem;          /* Adjust this value so that it appears where you want. */
-    font-size: 1.3rem;      /* Adjust this value so that it appears what size you want. */
+    font-size: 1.05rem;      /* Adjust this value so that it appears what size you want. */
 }
 
 .container a {
@@ -270,12 +277,63 @@ button:hover {
     }
 
     body {
+        font-family: var(--acm-serif);
         max-width: none;
         width: auto;
         margin: 0;
         padding: 0;
+        font-size: 0.80rem;
+        line-height: 1.22;
+    }
+
+    /* Slightly tighter print layout for the 1-page Industry CV */
+    body.cv-industry {
         font-size: 0.78rem;
-        line-height: 1.12rem;
+        line-height: 1.18;
+    }
+
+    /* Slightly tighter for the multi-page SAP research CV (target <= 2 pages) */
+    body.cv-sap-research {
+        font-size: 0.76rem;
+        line-height: 1.16;
+    }
+
+    body.cv-sap-research h4 {
+        margin: 7px 0 4px 0;
+        padding-bottom: 3px;
+    }
+
+    body.cv-sap-research .one-block,
+    body.cv-sap-research .left-content .one-block {
+        margin: 0 0 5px 0;
+    }
+
+    body.cv-industry .title {
+        margin: 0 0 10px 0;
+    }
+
+    body.cv-industry .icon_description {
+        margin: 2px 0;
+    }
+
+    body.cv-industry .one-block,
+    body.cv-industry .left-content .one-block {
+        margin: 0 0 6px 0;
+    }
+
+    body.cv-industry .experiment {
+        margin: 0 0 5px 0;
+    }
+
+    body.cv-industry h4 {
+        margin: 8px 0 5px 0;
+        padding-bottom: 3px;
+    }
+
+    body.cv-industry li,
+    body.cv-industry p {
+        font-size: 0.73rem;
+        line-height: 1.18;
     }
 
     .container {
@@ -292,8 +350,13 @@ button:hover {
     }
 
     .two_col_header {
-        grid-template-columns: 66% auto;
-        column-gap: 10px;
+        /* Make the contact block truly top-right aligned in print */
+        grid-template-columns: 1fr 230px;
+        column-gap: 8px;
+    }
+
+    .right-content {
+        justify-self: end;
     }
 
     .two_col_content {
@@ -302,11 +365,11 @@ button:hover {
     }
 
     .one-block {
-        margin: 0 0 10px 0;
+        margin: 0 0 8px 0;
     }
 
     .left-content .one-block {
-        margin: 0 0 10px 0;
+        margin: 0 0 8px 0;
     }
 
     h4 {
@@ -320,12 +383,37 @@ button:hover {
     }
 
     li, p {
-        font-size: 0.7rem;
-        line-height: 1.1rem;
+        font-size: 0.76rem;
+        line-height: 1.22;
+        text-align: left;
+        hyphens: none;
     }
 
-    ul{
-        padding-inline: 0px 0px;
+    /* Keep dates right-aligned even though body text is left-aligned in print */
+    .two_col_content > p {
+        text-align: right;
+        justify-self: end;
+    }
+
+    /* Print-friendly bullets: keep the marker inside the li box to avoid clipping,
+     * and keep indentation tight to reduce wrapping. */
+    ul {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    li {
+        list-style-type: none;
+        position: relative;
+        padding-left: 0.9rem;
+    }
+
+    li::before {
+        content: '•';
+        position: absolute;
+        left: 0;
+        top: 0.05em;
+        font-size: 0.95em;
     }
 
     .container a {
